@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Annual Leave Application 2027 - MCMSS Qurum</title>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F1F5F7;--card:#fff;--ink:#12303A;--mute:#5B727B;--line:#C9D7DD;--acc:#0E6B73;--accink:#fff;--warn:#B3261E;--ok:#E3F2EF;--we:#EAF0F3;--note:#FFF4D6;--noteink:#4A3600;
+--c0:#0E6B73;--c1:#B45309;--c2:#6D28D9;--c3:#BE185D;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D1A1F;--card:#14262D;--ink:#E4EEF1;--mute:#93AAB2;--line:#2B434C;--acc:#4FB3BC;--accink:#07242A;--warn:#FF8A80;--ok:#16363A;--we:#1A3038;--note:#3A2F10;--noteink:#FFE7A3}}
+:root[data-theme="dark"]{--bg:#0D1A1F;--card:#14262D;--ink:#E4EEF1;--mute:#93AAB2;--line:#2B434C;--acc:#4FB3BC;--accink:#07242A;--warn:#FF8A80;--ok:#16363A;--we:#1A3038;--note:#3A2F10;--noteink:#FFE7A3}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 "Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:720px;margin:0 auto;padding:20px 16px 48px}
+.banner{background:var(--ok);border:1px solid var(--line);border-radius:6px;padding:8px 12px;font-size:14px;color:var(--mute);margin-bottom:16px}
+h1{font-size:26px;line-height:1.25;margin:0 0 14px;font-weight:700}
+.notice{background:var(--note);color:var(--noteink);border-left:6px solid #D9A400;border-radius:6px;padding:12px 16px;margin:0 0 20px}
+.notice b{display:block;margin-bottom:4px}
+.notice ul{margin:0;padding-left:20px}
+.notice li{margin:3px 0}
+form{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}
+fieldset{border:0;padding:0;margin:0 0 22px;min-width:0}
+legend{font-weight:700;font-size:17px;padding:0;margin-bottom:4px}
+.hint{font-size:14px;color:var(--mute);margin:0 0 12px}
+label{display:block;font-weight:600;font-size:15px;margin:12px 0 4px}
+input,select{width:100%;padding:11px 12px;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--acc);outline-offset:1px}
+.req::after{content:" *";color:var(--warn)}
+.err{color:var(--warn);font-size:13px;margin:4px 0 0}
+.sep{height:1px;background:var(--line);margin:4px 0 22px}
+button{font:inherit;cursor:pointer}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:480px){.two{grid-template-columns:1fr}}
+.go{font-weight:700;background:var(--acc);color:var(--accink);border:0;border-radius:6px;padding:12px 22px}
+.sec{background:transparent;color:var(--acc);border:1px solid var(--acc);border-radius:6px;padding:8px 14px;font-weight:600}
+.opts{display:grid;gap:8px;margin-bottom:12px}
+.opt{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center}
+.pick{display:flex;flex-wrap:wrap;gap:2px 10px;align-items:center;text-align:left;width:100%;padding:10px 12px;background:var(--bg);color:var(--ink);border:2px solid var(--line);border-radius:8px;border-left:8px solid var(--c)}
+.pick[aria-pressed="true"]{border-color:var(--c);background:color-mix(in srgb,var(--c) 14%,var(--bg))}
+.pick span{color:var(--mute);font-size:14px}
+.pick[aria-pressed="true"] span{color:var(--ink)}
+.pick em{font-style:normal;font-size:13px;font-weight:600;color:var(--warn);flex-basis:100%}
+.clr{padding:8px 12px;font-size:14px;background:transparent;color:var(--mute);border:1px solid var(--line);border-radius:6px}
+.status{background:var(--ok);border:1px solid var(--line);border-radius:6px;padding:10px 12px;font-size:15px;margin:0 0 12px}
+.warnbox{border:2px solid var(--warn);background:color-mix(in srgb,var(--warn) 10%,var(--card));color:var(--warn);border-radius:6px;padding:10px 12px;font-size:15px;font-weight:700;margin:0 0 12px}
+/* calendar */
+.cal{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.nav{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;padding:10px;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav button{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:8px 14px;font-weight:600}
+.nav button:disabled{opacity:.35;cursor:default}
+.nav select{font-weight:700;text-align:center;text-align-last:center}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+th{font-size:13px;font-weight:600;color:var(--mute);padding:8px 0;border-bottom:1px solid var(--line)}
+td{padding:0;border:1px solid var(--line);height:52px}
+td.we{background:var(--we)}
+td.x{background:transparent}
+.d{position:relative;width:100%;height:100%;min-height:48px;border:0;background:transparent;color:var(--ink);font-size:15px;padding:0}
+.d:hover{background:color-mix(in srgb,var(--acc) 14%,transparent)}
+.d.in{background:color-mix(in srgb,var(--c) 30%,transparent)}
+.d.edge{background:var(--c);color:#fff;font-weight:700}
+.d.edge::after{content:attr(data-n);position:absolute;top:2px;right:4px;font-size:10px}
+.d.ov{box-shadow:inset 0 0 0 3px var(--warn)}
+.d.ov::before{content:"!";position:absolute;top:1px;left:4px;font-size:12px;font-weight:700;color:var(--warn)}
+.d.edge.ov::before{color:#fff}
+.legend{font-size:13px;color:var(--mute);margin:8px 0 0}
+#done{display:none;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}
+#done dl{margin:12px 0;display:grid;grid-template-columns:max-content 1fr;gap:6px 14px}
+#done dt{color:var(--mute)}#done dd{margin:0;font-weight:600}
+@media (max-width:480px){#done dl{grid-template-columns:1fr}td{height:46px}.d{min-height:44px;font-size:14px}}
+</style>
+</head>
+<body>
+<main>
+<h1 id="ttl">Annual Leave Application for the Year 2027 - MCMSS Qurum</h1>
+
+<div class="notice" id="ntc" role="note">
+  <b>Important statement</b>
+  <ul>
+    <li>This is to draw the first draft of the annual leave. You will be contacted once it is finalized or if adjustments are needed.</li>
+    <li>Deadline to fill the form: <strong>December 1st</strong>. Any request submitted after this will be considered only if the schedule permits.</li>
+  </ul>
+</div>
+
+<form id="f" novalidate>
+  <fieldset>
+    <legend>Your details</legend>
+    <div style="max-width:560px">
+      <div class="two">
+        <div>
+          <label class="req" for="fname">First name</label>
+          <input id="fname" autocomplete="given-name">
+          <div class="err" id="e-fname"></div>
+        </div>
+        <div>
+          <label class="req" for="lname">Last name</label>
+          <input id="lname" autocomplete="family-name">
+          <div class="err" id="e-lname"></div>
+        </div>
+      </div>
+      <label for="email">Email (optional)</label>
+      <input id="email" type="email" autocomplete="email">
+      <div class="err" id="e-email"></div>
+    </div>
+  </fieldset>
+  <div class="sep"></div>
+
+  <fieldset>
+    <legend>Leave options</legend>
+    <p class="hint">Leave options are optional. You can choose up to 4 options in order of preference. Select an option, then click its start date and end date on the calendar. Use the arrows to move between months (December 2026 to December 2027).</p>
+    <div class="opts" id="opts"></div>
+    <p class="status" id="status" aria-live="polite"></p>
+    <div class="warnbox" id="ovbox" role="alert" hidden></div>
+    <div class="cal">
+      <div class="nav">
+        <button type="button" id="prev" aria-label="Previous month">&#8249; Prev</button>
+        <select id="mon" aria-label="Jump to month"></select>
+        <button type="button" id="next" aria-label="Next month">Next &#8250;</button>
+      </div>
+      <table>
+        <thead><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr></thead>
+        <tbody id="body"></tbody>
+      </table>
+    </div>
+    <p class="legend">Numbered squares mark the start and end of each option. A red outline with ! marks a day that falls in more than one option.</p>
+    <div class="err" id="e-leave"></div>
+  </fieldset>
+  <div class="sep"></div>
+
+  <fieldset>
+    <legend>CME day</legend>
+    <p class="hint">Select one: first Wednesday of the month, 2027. Mandatory to complete your annual leave submission.</p>
+    <div style="max-width:420px">
+      <label class="req" for="cme">CME date</label>
+      <select id="cme"></select>
+      <div class="err" id="e-cme"></div>
+    </div>
+  </fieldset>
+  <button class="go" type="submit">Submit leave request</button>
+  <div class="err" id="e-submit"></div>
+</form>
+
+<section id="done" aria-live="polite">
+  <h1 style="font-size:26px">Thank you</h1>
+  <p style="font-size:18px;font-weight:600;margin:0 0 6px">Your request is under consideration.</p>
+  <p class="hint">You will be contacted once the annual leave plan is finalized or if adjustments are needed.</p>
+  <dl id="sum"></dl>
+</section>
+</main>
+
+<script>
+(function(){
+var SCRIPT_URL='https://script.google.com/macros/s/AKfycbx9WRtjUM-eRkcmh6xjIZ6jtUyMzQryL7rOwSAZT9GOsDfGYmCJ6kIxs6FW6VB-rYbD3w/exec';
+var N=4, DAY=86400000, LAST=12;               /* view 0 = Dec 2026 ... view 12 = Dec 2027 */
+var D=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+var M=['January','February','March','April','May','June','July','August','September','October','November','December'];
+function fmt(t){var d=new Date(t);return D[d.getUTCDay()]+' '+d.getUTCDate()+' '+M[d.getUTCMonth()].slice(0,3)+' '+d.getUTCFullYear();}
+function ym(v){return v===0?[2026,11]:[2027,v-1];}
+function days(o){return (o.e-o.s)/DAY+1;}
+function iso(t){return new Date(t).toISOString().slice(0,10);}
+
+var opts=[],active=0,view=0,ovAck=false;
+for(var i=0;i<N;i++)opts.push({s:null,e:null});
+
+function owners(t){
+  var r=[];
+  for(var i=0;i<N;i++){var o=opts[i];if(o.s===null)continue;
+    if(o.e===null?t===o.s:(t>=o.s&&t<=o.e))r.push(i);}
+  return r;
+}
+function overlaps(){
+  var r=[];
+  for(var a=0;a<N;a++)for(var b=a+1;b<N;b++){
+    var x=opts[a],y=opts[b];
+    if(x.e!==null&&y.e!==null&&x.s<=y.e&&y.s<=x.e)r.push({a:a,b:b,s:Math.max(x.s,y.s),e:Math.min(x.e,y.e)});
+  }
+  return r;
+}
+
+/* option rows */
+var optsEl=document.getElementById('opts'),rows=[];
+for(var k=0;k<N;k++){
+  (function(k){
+    var w=document.createElement('div');w.className='opt';
+    var b=document.createElement('button');b.type='button';b.className='pick';b.style.setProperty('--c','var(--c'+k+')');
+    b.addEventListener('click',function(){active=k;
+      if(opts[k].s!==null){var d=new Date(opts[k].s);view=Math.max(0,Math.min(LAST,d.getUTCFullYear()===2026?0:d.getUTCMonth()+1));}
+      render();});
+    var c=document.createElement('button');c.type='button';c.className='clr';c.textContent='Clear';
+    c.addEventListener('click',function(){opts[k]={s:null,e:null};active=k;render();});
+    w.appendChild(b);w.appendChild(c);optsEl.appendChild(w);rows.push(b);
+  })(k);
+}
+
+/* month jump list */
+var mon=document.getElementById('mon');
+for(var v=0;v<=LAST;v++){var p=ym(v);mon.appendChild(new Option(M[p[1]]+' '+p[0],v));}
+mon.addEventListener('change',function(){view=+mon.value;render();});
+document.getElementById('prev').addEventListener('click',function(){if(view>0){view--;render();}});
+document.getElementById('next').addEventListener('click',function(){if(view<LAST){view++;render();}});
+
+var body=document.getElementById('body');
+
+function render(){
+  var p=ym(view),y=p[0],m=p[1];
+  mon.value=view;
+  ovAck=false;var sb=document.querySelector('.go');if(sb&&!sb.disabled)sb.textContent='Submit leave request';
+  document.getElementById('prev').disabled=view===0;
+  document.getElementById('next').disabled=view===LAST;
+
+  body.innerHTML='';
+  var lead=new Date(Date.UTC(y,m,1)).getUTCDay(), dim=new Date(Date.UTC(y,m+1,0)).getUTCDate();
+  var n=1,tr;
+  for(var r=0;r<6;r++){
+    tr=document.createElement('tr');
+    for(var c=0;c<7;c++){
+      var td=document.createElement('td'), idx=r*7+c;
+      if(c>=5)td.className='we';
+      if(idx<lead||n>dim){td.className='x';tr.appendChild(td);continue;}
+      var t=Date.UTC(y,m,n),ow=owners(t);
+      var b=document.createElement('button');b.type='button';b.textContent=n;b.dataset.t=t;
+      var cls='d',edge=-1;
+      for(var q=0;q<ow.length;q++){var o=opts[ow[q]];if(t===o.s||t===o.e){edge=ow[q];break;}}
+      if(edge>=0){cls+=' edge';b.style.setProperty('--c','var(--c'+edge+')');b.dataset.n=edge+1;}
+      else if(ow.length){
+        cls+=' in';b.style.setProperty('--c','var(--c'+ow[0]+')');
+        if(ow.length>1){
+          var st=[];ow.forEach(function(i,j){st.push('color-mix(in srgb,var(--c'+i+') 40%,transparent) '+(j*7)+'px '+((j+1)*7)+'px');});
+          b.style.background='repeating-linear-gradient(45deg,'+st.join(',')+')';
+        }
+      }
+      if(ow.length>1)cls+=' ov';
+      b.className=cls;
+      b.setAttribute('aria-label',fmt(t)+(ow.length?', option '+ow.map(function(i){return i+1;}).join(' and '):'')+(ow.length>1?', overlap':''));
+      td.appendChild(b);tr.appendChild(td);n++;
+    }
+    body.appendChild(tr);
+    if(n>dim)break;
+  }
+
+  var ovs=overlaps(), ovFor=[[],[],[],[]];
+  ovs.forEach(function(x){ovFor[x.a].push(x.b+1);ovFor[x.b].push(x.a+1);});
+  rows.forEach(function(b,i){
+    var oo=opts[i],txt;
+    if(oo.s===null)txt='Not selected';
+    else if(oo.e===null)txt='Starts '+fmt(oo.s)+', now pick the end date';
+    else txt=fmt(oo.s)+' to '+fmt(oo.e)+' ('+days(oo)+(days(oo)===1?' day)':' days)');
+    b.innerHTML='<b></b><span></span>';
+    b.firstChild.textContent='Option '+(i+1)+(i===0?' (most preferred)':'');
+    b.lastChild.textContent=txt;
+    if(ovFor[i].length){var em=document.createElement('em');em.textContent='Overlaps with option '+ovFor[i].join(' and ');b.appendChild(em);}
+    b.setAttribute('aria-pressed',i===active?'true':'false');
+  });
+
+  var box=document.getElementById('ovbox');
+  if(ovs.length){
+    box.hidden=false;
+    box.textContent='Warning, your leave options overlap: '+ovs.map(function(x){return 'Option '+(x.a+1)+' and option '+(x.b+1)+' share '+(x.s===x.e?fmt(x.s):fmt(x.s)+' to '+fmt(x.e));}).join('; ')+'. Change the dates if this is not intended.';
+  }else box.hidden=true;
+
+  var o=opts[active],pend=o.s!==null&&o.e===null,st=document.getElementById('status'),lab='Option '+(active+1);
+  if(pend)st.textContent=lab+': now click the end date (click the same day for a single day).';
+  else if(o.s!==null)st.textContent=lab+' is set. Click any date to choose new dates, or select another option.';
+  else st.textContent=lab+': click any date to set the start date.';
+}
+
+body.addEventListener('click',function(ev){
+  var el=ev.target.closest('.d');if(!el)return;
+  var t=+el.dataset.t,o=opts[active],pend=o.s!==null&&o.e===null;
+  if(pend){
+    var a=o.s;o.s=Math.min(a,t);o.e=Math.max(a,t);
+    for(var j=1;j<=N;j++){var nx=(active+j)%N;if(opts[nx].e===null){active=nx;break;}}
+  }else opts[active]={s:t,e:null};
+  document.getElementById('e-leave').textContent='';
+  render();
+});
+
+/* CME */
+var cme=document.getElementById('cme');
+cme.appendChild(new Option('Select CME date',''));
+for(var q=0;q<12;q++){var z=Date.UTC(2027,q,1);while(new Date(z).getUTCDay()!==3)z+=DAY;cme.appendChild(new Option(fmt(z),fmt(z)));}
+
+/* submit */
+function setErr(id,msg){document.getElementById(id).textContent=msg||'';return !!msg;}
+var form=document.getElementById('f'),done=document.getElementById('done');
+form.addEventListener('submit',function(ev){
+  ev.preventDefault();
+  var fname=document.getElementById('fname').value.trim(),lname=document.getElementById('lname').value.trim(),email=document.getElementById('email').value.trim(),bad=false;
+  bad=setErr('e-fname',fname?'':'Enter your first name.')||bad;
+  bad=setErr('e-lname',lname?'':'Enter your last name.')||bad;
+  bad=setErr('e-email',(!email||/^\S+@\S+\.\S+$/.test(email))?'':'Enter a valid email address or leave it empty.')||bad;
+  var missing=[];opts.forEach(function(o,i){if(o.s!==null&&o.e===null)missing.push(i+1);});
+  bad=setErr('e-leave',missing.length?'Click an end date to finish option'+(missing.length>1?'s ':' ')+missing.join(', ')+', or clear it.':'')||bad;
+  bad=setErr('e-cme',cme.value?'':'Select a CME day to complete your submission.')||bad;
+  if(bad){var e=document.querySelector('.err:not(:empty)');if(e)e.scrollIntoView({block:'center'});return;}
+  if(overlaps().length&&!ovAck){
+    ovAck=true;form.querySelector('.go').textContent='Submit anyway';
+    setErr('e-submit','Your leave options overlap (see the red warning above the calendar). Change the dates, or press "Submit anyway" to send them as they are.');
+    return;
+  }
+  setErr('e-submit','');
+  var r=[['Name',fname+' '+lname]];
+  if(email)r.push(['Email',email]);
+  opts.forEach(function(o,i){r.push(['Option '+(i+1),o.e===null?'Not selected':fmt(o.s)+' to '+fmt(o.e)+' ('+days(o)+(days(o)===1?' day)':' days)')]);});
+  r.push(['CME day',cme.value]);
+  var ov=overlaps();
+  if(ov.length)r.push(['Overlap flag',ov.map(function(x){return 'Option '+(x.a+1)+' / '+(x.b+1);}).join(', ')]);
+  var payload={firstName:fname,lastName:lname,email:email,
+    options:opts.map(function(o){return o.e===null?{start:'',end:'',days:''}:{start:iso(o.s),end:iso(o.e),days:days(o)};}),
+    cme:cme.value,
+    overlap:ov.map(function(x){return (x.a+1)+'/'+(x.b+1);}).join(', ')};
+  var btn=form.querySelector('.go');btn.disabled=true;btn.textContent='Submitting...';setErr('e-submit','');
+  function showThanks(){
+    var dl=document.getElementById('sum');dl.innerHTML='';
+    r.forEach(function(p){var a=document.createElement('dt'),b=document.createElement('dd');a.textContent=p[0];b.textContent=p[1];dl.appendChild(a);dl.appendChild(b);});
+    form.style.display='none';document.getElementById('ttl').style.display='none';document.getElementById('ntc').style.display='none';done.style.display='block';window.scrollTo(0,0);
+  }
+  function fail(err){btn.disabled=false;btn.textContent='Submit leave request';setErr('e-submit','Submission failed. Please check your connection and try again.');}
+  fetch(SCRIPT_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)})
+    .then(function(r){return r.json();})
+    .then(function(j){if(j&&j.ok)showThanks();else fail();})
+    .catch(fail);
+});
+
+render();
+})();
+</script>
+</body>
+</html>
